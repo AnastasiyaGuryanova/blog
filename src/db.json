@@ -5,7 +5,7 @@
 			"login": "Nastay",
 			"password": "qwerty123",
 			"registed_at": "2023-09-22",
-			"role_id": "0"
+			"role_id": 0
 		}
 	],
 	"roles": [
