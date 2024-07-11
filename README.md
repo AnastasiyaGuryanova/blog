@@ -15,7 +15,7 @@
 
 -   пользователи - users: id | login | password | registed_at | role_id
 -   роль пользователя - roles: id | name
--   статья - posts: id | titel | imag_url | content | published_at
+-   статья - posts: id | title | imag_url | content | published_at
 -   комментарии - comments: id | autor_id | post_id | content
 
 Схема состояния на BFF:
@@ -25,6 +25,6 @@
 Схема для redux store (на клиенте):
 
 -   user: id | login | role_id
--   posts: - массив post: id | titel | imagUrl | publishedAt | commentsCount
--   post: id | titel | imagUrl | content | publishedAt | comments: массив comment: id | autor | content | published_at
+-   posts: - массив post: id | title | imagUrl | publishedAt | commentsCount
+-   post: id | title | imagUrl | content | publishedAt | comments: массив comment: id | autor | content | published_at
 -   users: массив user: id | login | registedAt | role

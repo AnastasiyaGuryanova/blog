@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+	"start-server": "json-server --watch src/db.json --port 3008"
   },
   "dependencies": {
     "eslint-config-prettier": "^9.1.0",
