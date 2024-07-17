@@ -24,7 +24,7 @@
 
 Схема для redux store (на клиенте):
 
--   user: id | login | role_id
+-   user: id | login | role_id | session
 -   posts: - массив post: id | title | imagUrl | publishedAt | commentsCount
 -   post: id | title | imagUrl | content | publishedAt | comments: массив comment: id | autor | content | published_at
 -   users: массив user: id | login | registedAt | role
