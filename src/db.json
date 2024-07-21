@@ -3,23 +3,9 @@
     {
       "id": "001",
       "login": "Nastay",
-      "password": "qwerty123",
+      "password": "qwe123",
       "registed_at": "2023-09-22",
       "role_id": 0
-    },
-    {
-      "id": "9449",
-      "login": "Ivan",
-      "password": "123qwerty",
-      "registed_at": "2051-01-18 17:00",
-      "role_id": 2
-    },
-    {
-      "id": "1636",
-      "login": "Tolya",
-      "password": "123qwerty",
-      "registed_at": "2040-01-17 00:06",
-      "role_id": 2
     }
   ],
   "roles": [

@@ -1,24 +1,24 @@
-import { useEffect, useState } from "react";
-import { API_KEY } from "../../constants";
+// import { useEffect, useState } from "react";
+// import { API_KEY } from "../../constants";
 import styled from "styled-components";
 
 const FooterContainer = ({ className }) => {
-	const [city, setCity] = useState("");
-	const [temperature, setTemperature] = useState("");
-	const [weather, setWeather] = useState("");
+	// const [city, setCity] = useState("");
+	// const [temperature, setTemperature] = useState("");
+	// const [weather, setWeather] = useState("");
 
-	useEffect(() => {
-		fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&lang=ru&appid=${API_KEY}`,
-		)
-			.then((res) => res.json())
-			.then(({ main, name, weather }) => {
-				console.log();
-				setCity(name);
-				setTemperature(Math.round(main.temp));
-				setWeather(weather[0].description);
-			});
-	}, []);
+	// useEffect(() => {
+	// 	fetch(
+	// 		`https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&lang=ru&appid=${API_KEY}`,
+	// 	)
+	// 		.then((res) => res.json())
+	// 		.then(({ main, name, weather }) => {
+	// 			console.log();
+	// 			setCity(name);
+	// 			setTemperature(Math.round(main.temp));
+	// 			setWeather(weather[0].description);
+	// 		});
+	// }, []);
 
 	return (
 		<div className={className}>
@@ -27,7 +27,7 @@ const FooterContainer = ({ className }) => {
 				<div>web@developer.ru</div>
 			</div>
 			<div>
-				<div>
+				{/* <div>
 					{city},{" "}
 					{new Date().toLocaleString("ru", {
 						day: "numeric",
@@ -36,7 +36,7 @@ const FooterContainer = ({ className }) => {
 				</div>
 				<div>
 					{temperature} градусов, {weather}
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
