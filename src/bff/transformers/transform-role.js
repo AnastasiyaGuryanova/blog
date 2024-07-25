@@ -1,4 +1,4 @@
-export const transforRole = (dbUser) => ({
-	id: dbUser.id,
-	name: dbUser.name,
+export const transformRole = (dbRole) => ({
+	id: dbRole.id,
+	name: dbRole.name,
 });

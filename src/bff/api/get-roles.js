@@ -1,6 +1,6 @@
-import { transforRole } from "../transformers";
+import { transformRole } from "../transformers";
 
 export const getRoles = () =>
 	fetch("http://localhost:3008/roles")
 		.then((loadedRoles) => loadedRoles.json())
-		.then((loadedRoles) => loadedRoles.map(transforRole));
+		.then((loadedRoles) => loadedRoles.map(transformRole));

@@ -16,7 +16,7 @@
 -   пользователи - users: id | login | password | registed_at | role_id
 -   роль пользователя - roles: id | name
 -   статья - posts: id | title | imag_url | content | published_at
--   комментарии - comments: id | autor_id | post_id | content
+-   комментарии - comments: id | autor_id | post_id | content | published_at
 
 Схема состояния на BFF:
 
@@ -26,5 +26,5 @@
 
 -   user: id | login | role_id | session
 -   posts: - массив post: id | title | imagUrl | publishedAt | commentsCount
--   post: id | title | imagUrl | content | publishedAt | comments: массив comment: id | autor | content | published_at
+-   post: id | title | imagUrl | content | publishedAt | comments: массив comment: id | author | content | published_at
 -   users: массив user: id | login | registedAt | role

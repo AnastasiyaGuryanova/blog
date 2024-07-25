@@ -6,6 +6,13 @@
       "password": "qwe123",
       "registed_at": "2023-09-22",
       "role_id": 0
+    },
+    {
+      "id": "7f12",
+      "login": "test",
+      "password": "123456",
+      "registed_at": "2038-02-03 07:26",
+      "role_id": 2
     }
   ],
   "roles": [
@@ -77,5 +84,68 @@
       "published_at": "2024-04-03"
     }
   ],
-  "comment": []
+  "comments": [
+    {
+      "id": "326c",
+      "author_id": "001",
+      "post_id": "002",
+      "published_at": "2055-10-26 06:28",
+      "content": "test"
+    },
+    {
+      "id": "1bb2",
+      "author_id": "001",
+      "post_id": "002",
+      "published_at": "2057-01-27 22:18",
+      "content": "Мой первый комментарий"
+    },
+    {
+      "id": "3ecb",
+      "author_id": "001",
+      "post_id": "002",
+      "published_at": "2036-03-10 03:16",
+      "content": "Мой первый комментарий"
+    },
+    {
+      "id": "6fb0",
+      "author_id": "001",
+      "post_id": "002",
+      "published_at": "2058-12-19 08:06",
+      "content": "Мой первый комментарий"
+    },
+    {
+      "id": "6feb",
+      "author_id": "001",
+      "post_id": "002",
+      "published_at": "2045-12-08 23:26",
+      "content": "Мой первый комментарий"
+    },
+    {
+      "id": "6138",
+      "author_id": "001",
+      "post_id": "002",
+      "published_at": "2048-02-12 15:59",
+      "content": "Мой первый комментарий"
+    },
+    {
+      "id": "9e4e",
+      "author_id": "001",
+      "post_id": "002",
+      "published_at": "2040-05-24 04:36",
+      "content": "new"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "99cd",
+      "hash": "0.02095557899340083629624587047146633267402648925781",
+      "user": {
+        "id": "001",
+        "login": "Nastay",
+        "password": "qwe123",
+        "registedAt": "2023-09-22",
+        "roleId": 0
+      }
+    }
+  ]
 }
