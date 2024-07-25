@@ -1,7 +1,37 @@
-import styled from "styled-components";
+import { useDispatch } from "react-redux";
 import { Icon } from "../../../../../../components";
+import {
+	openModal,
+	CLOSE_MODAL,
+	removeCommentAsync,
+} from "../../../../../../actions";
+import { useServerRequest } from "../../../../../../hooks";
+import styled from "styled-components";
 
-const CommentContainer = ({ className, id, author, content, publishedAt }) => {
+const CommentContainer = ({
+	className,
+	postId,
+	id,
+	author,
+	content,
+	publishedAt,
+}) => {
+	const dispatch = useDispatch();
+	const requestServer = useServerRequest();
+
+	const onCommentRemove = (id) => {
+		dispatch(
+			openModal({
+				text: "Удалить комментарий?",
+				onConfirm: () => {
+					dispatch(removeCommentAsync(requestServer, postId, id));
+					dispatch(CLOSE_MODAL);
+				},
+				onCancel: () => dispatch(CLOSE_MODAL),
+			}),
+		);
+	};
+
 	return (
 		<div className={className}>
 			<div className="comment">
@@ -11,7 +41,6 @@ const CommentContainer = ({ className, id, author, content, publishedAt }) => {
 							id="fa fa-user-circle-o"
 							size="18px"
 							margin="0 10px 0 10px"
-							onClick={() => {}}
 						/>
 						{author}
 					</div>
@@ -20,7 +49,6 @@ const CommentContainer = ({ className, id, author, content, publishedAt }) => {
 							id="fa fa-calendar-o"
 							size="18px"
 							margin="0 10px 0 0"
-							onClick={() => {}}
 						/>
 						{publishedAt}
 					</div>
@@ -31,7 +59,7 @@ const CommentContainer = ({ className, id, author, content, publishedAt }) => {
 				id="fa fa-trash-o"
 				size="21px"
 				margin="0 8px 0 8px"
-				onClick={() => {}}
+				onClick={() => onCommentRemove(id)}
 			/>
 		</div>
 	);
