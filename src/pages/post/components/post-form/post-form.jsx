@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Icon, Input } from "../../../../components";
@@ -9,55 +9,62 @@ import { sanitizeContent } from "./utils";
 import styled from "styled-components";
 
 const PostFormContainer = ({
-	post: { id, title, imagUrl, content, publishedAt },
+	post: { id, title, imageUrl, content, publishedAt },
 	className,
 }) => {
-	const imageRef = useRef(null);
-	const titleRef = useRef(null);
+	const [imageUrlValue, setImageUrlValue] = useState(imageUrl);
+	const [titleValue, setTitleValue] = useState(title);
 	const contentRef = useRef(null);
 
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const requestServer = useServerRequest();
 
+	useLayoutEffect(() => {
+		setImageUrlValue(imageUrl);
+		setTitleValue(title);
+	}, [imageUrl, title]);
+
 	const onSave = () => {
-		const newImage = imageRef.current.value;
-		const newTitle = titleRef.current.value;
 		const newContent = sanitizeContent(contentRef.current.innerHTML);
 
 		dispatch(
 			savePostAsync(requestServer, {
 				id,
-				image: newImage,
-				title: newTitle,
+				imageUrl: imageUrlValue,
+				title: titleValue,
 				content: newContent,
 			}),
-		).then(() => navigate(`/post/${id}`));
+		).then(({ id }) => navigate(`/post/${id}`));
+	};
+
+	const onImageChange = ({ target }) => {
+		setImageUrlValue(target.value);
+	};
+
+	const onTitleChange = ({ target }) => {
+		setTitleValue(target.value);
 	};
 
 	return (
 		<div className={className}>
 			<Input
-				ref={imageRef}
-				defaultValue={imagUrl}
+				value={imageUrlValue}
 				placeholder="Изображение..."
+				onChange={onImageChange}
 			/>
 			<Input
-				ref={titleRef}
-				defaultValue={title}
+				value={titleValue}
 				placeholder="Заголовок..."
+				onChange={onTitleChange}
 			/>
 
 			<SpecialPanel
+				id={id}
 				publishedAt={publishedAt}
 				margin="20px 0"
 				editButton={
-					<Icon
-						id="fa-floppy-o"
-						size="21px"
-						margin="0 10px 0 0"
-						onClick={onSave}
-					/>
+					<Icon id="fa-floppy-o" size="21px" onClick={onSave} />
 				}
 			/>
 			<div
@@ -79,7 +86,9 @@ export const PostForm = styled(PostFormContainer)`
 	}
 
 	& .post-text {
+		min-height: 80px;
 		font-size: 18px;
 		white-space: pre-line;
+		border: 1px solid #000;
 	}
 `;

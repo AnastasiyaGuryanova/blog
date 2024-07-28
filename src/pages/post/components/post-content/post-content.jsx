@@ -4,14 +4,15 @@ import { SpecialPanel } from "../special-panel/special-panel";
 import styled from "styled-components";
 
 const PostContentContainer = ({ post, className }) => {
-	const { id, title, imagUrl, content, publishedAt } = post;
+	const { id, title, imageUrl, content, publishedAt } = post;
 	const navigate = useNavigate();
 
 	return (
 		<div className={className}>
-			<img src={imagUrl} alt={title} />
+			<img src={imageUrl} alt={title} />
 			<H2>{title}</H2>
 			<SpecialPanel
+				id={id}
 				publishedAt={publishedAt}
 				margin="-20px 0 20px"
 				editButton={

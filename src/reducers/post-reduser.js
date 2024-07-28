@@ -3,7 +3,7 @@ import { ACTION_TYPE } from "../actions/action-type";
 const initialPostState = {
 	id: "",
 	title: "",
-	imagUrl: "",
+	imageUrl: "",
 	content: "",
 	publishedAt: "",
 	comments: [],
@@ -16,6 +16,8 @@ export const postReduser = (state = initialPostState, action) => {
 				...state,
 				...action.payload,
 			};
+		case ACTION_TYPE.RESET_POST_DATA:
+			return initialPostState;
 
 		default:
 			return state;

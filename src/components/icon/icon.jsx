@@ -12,7 +12,7 @@ export const Icon = styled(IconContainer)`
 	color: ${({ disabled }) => (disabled ? "#ccc;" : "#000;")}
 
 	&:hover {
-		cursor: pointer;
+		cursor: ${({ inactive }) => (inactive ? "default" : "pointer")} ;
 	}
 
 `;
