@@ -76,7 +76,7 @@ const AutorizationContainer = ({ className }) => {
 
 	const formError = errors?.login?.message || errors?.password?.message;
 
-	const errorMassage = formError || serverError;
+	const errorMessage = formError || serverError;
 
 	if (roleId !== ROLE.GUEST) {
 		return <Navigate to="/" />;
@@ -103,7 +103,7 @@ const AutorizationContainer = ({ className }) => {
 				<Button type="submit" disabled={!!formError}>
 					Авторизоваться
 				</Button>
-				{errorMassage && <AuthFormError>{errorMassage}</AuthFormError>}
+				{errorMessage && <AuthFormError>{errorMessage}</AuthFormError>}
 				<StyledLink to="/register">Регистрация</StyledLink>
 			</form>
 		</div>

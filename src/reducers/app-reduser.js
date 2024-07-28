@@ -12,7 +12,7 @@ const initialAppState = {
 
 export const appReduser = (state = initialAppState, action) => {
 	switch (action.type) {
-		case ACTION_TYPE.LOGAUT: {
+		case ACTION_TYPE.LOGOUT: {
 			return {
 				...state,
 				wasLogout: !state.wasLogout,

@@ -15,7 +15,6 @@ export const sessions = {
 		if (!session) {
 			return;
 		}
-		console.log(session.id);
 
 		deleteSession(session.id);
 	},

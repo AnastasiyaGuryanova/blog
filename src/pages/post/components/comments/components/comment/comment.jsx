@@ -38,7 +38,7 @@ const CommentContainer = ({
 				<div className="information-panel">
 					<div className="author">
 						<Icon
-							id="fa fa-user-circle-o"
+							id="fa-user-circle-o"
 							size="18px"
 							margin="0 10px 0 10px"
 						/>
@@ -46,7 +46,7 @@ const CommentContainer = ({
 					</div>
 					<div className="published-at">
 						<Icon
-							id="fa fa-calendar-o"
+							id="fa-calendar-o"
 							size="18px"
 							margin="0 10px 0 0"
 						/>
@@ -56,7 +56,7 @@ const CommentContainer = ({
 				<div className="comment-text">{content}</div>
 			</div>
 			<Icon
-				id="fa fa-trash-o"
+				id="fa-trash-o"
 				size="21px"
 				margin="0 8px 0 8px"
 				onClick={() => onCommentRemove(id)}

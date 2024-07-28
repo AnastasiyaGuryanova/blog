@@ -5,6 +5,6 @@ export const logout = (session) => {
 	server.logout(session);
 
 	return {
-		type: ACTION_TYPE.LOGAUT,
+		type: ACTION_TYPE.LOGOUT,
 	};
 };
