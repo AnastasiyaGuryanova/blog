@@ -17,7 +17,7 @@ export const userReduser = (state = initialUserState, action) => {
 			};
 		}
 
-		case ACTION_TYPE.LOGAUT: {
+		case ACTION_TYPE.LOGOUT: {
 			return initialUserState;
 		}
 
