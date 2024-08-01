@@ -7,7 +7,7 @@ export const PrivateContent = ({ children, access, serverError = null }) => {
 	const userRole = useSelector(selectUserRole);
 
 	const accessError = checkAccess(access, userRole)
-		? nul
+		? null
 		: ERROR.ACCESS_DENIED;
 
 	const error = serverError || accessError;
