@@ -19,7 +19,7 @@ const LogoContainer = ({ className }) => (
 		<Icon size="70px" margin="0 10px 0 0" id="fa-code" />
 		<div>
 			<LargeText>Блог</LargeText>
-			<SmallText>веб-рфзработчика</SmallText>
+			<SmallText>веб-разработчика</SmallText>
 		</div>
 	</Link>
 );

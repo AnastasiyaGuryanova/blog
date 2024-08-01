@@ -10,7 +10,7 @@ import { Error, PrivateContent } from "../../components";
 import styled from "styled-components";
 
 const PostContainer = ({ className }) => {
-	const [error, setError] = useState(false);
+	const [error, setError] = useState(null);
 	const dispatch = useDispatch();
 	const params = useParams();
 	const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +30,7 @@ const PostContainer = ({ className }) => {
 		}
 
 		dispatch(loadPostAsync(requestServer, params.id)).then((postData) => {
-			setError(postData.error);
+			setError(postData.error || null);
 			setIsLoading(false);
 		});
 	}, [dispatch, params.id, requestServer, isCreating]);

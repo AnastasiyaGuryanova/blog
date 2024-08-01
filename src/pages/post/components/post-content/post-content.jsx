@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import { PROP_TYPE } from "../../../../constants";
 import { H2, Icon } from "../../../../components";
 import { SpecialPanel } from "../special-panel/special-panel";
 import styled from "styled-components";
 
-const PostContentContainer = ({ post, className }) => {
-	const { id, title, imageUrl, content, publishedAt } = post;
+const PostContentContainer = ({
+	post: { id, title, imageUrl, content, publishedAt },
+	className,
+}) => {
 	const navigate = useNavigate();
 
 	return (
@@ -40,3 +43,7 @@ export const PostContent = styled(PostContentContainer)`
 		white-space: pre-line;
 	}
 `;
+
+PostContent.propTypes = {
+	post: PROP_TYPE.POST.isRequired,
+};

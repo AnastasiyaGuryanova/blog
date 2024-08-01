@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import PropTypes from "prop-types";
 import { Icon } from "../../../../../../components";
 import {
 	openModal,
@@ -97,3 +98,11 @@ export const Comment = styled(CommentContainer)`
 		display: flex;
 	}
 `;
+
+Comment.propTypes = {
+	postId: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
+	author: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+};

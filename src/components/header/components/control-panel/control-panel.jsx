@@ -8,8 +8,8 @@ import {
 	selectUserSession,
 } from "../../../../selectors";
 import { logout } from "../../../../actions";
-import styled from "styled-components";
 import { checkAccess } from "../../../../utils";
+import styled from "styled-components";
 
 const RightAligned = styled.div`
 	display: flex;
