@@ -40,7 +40,7 @@ const StyledLink = styled(Link)`
 	font-size: 18px;
 `;
 
-const AutorizationContainer = ({ className }) => {
+const AuthorizationContainer = ({ className }) => {
 	const {
 		register,
 		reset,
@@ -110,7 +110,7 @@ const AutorizationContainer = ({ className }) => {
 	);
 };
 
-export const Autorization = styled(AutorizationContainer)`
+export const Authorization = styled(AuthorizationContainer)`
 	display: flex;
 	align-items: center;
 	flex-direction: column;

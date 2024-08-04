@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Error, Header, Footer, Modal } from "./components";
-import { Autorization, Registration, Post, Users, Main } from "./pages";
+import { Authorization, Registration, Post, Users, Main } from "./pages";
 import { ERROR } from "./constants";
 import { setUser } from "./actions";
 import styled from "styled-components";
@@ -46,10 +46,8 @@ export const Blog = () => {
 			<Rage>
 				<Routes>
 					<Route path="/" element={<Main />} />
-					<Route path="/login" element={<Autorization />} />
+					<Route path="/login" element={<Authorization />} />
 					<Route path="/register" element={<Registration />} />
-					import {(Autorization, Registration.UsersContainer)} from
-					"./pages";
 					<Route path="/users" element={<Users />} />
 					<Route path="/post" element={<Post />} />
 					<Route path="/post/:id" element={<Post />} />
