@@ -127,5 +127,17 @@
     }
   ],
   "comments": [],
-  "sessions": []
+  "sessions": [
+    {
+      "hash": "0.36366223029106503616958434577099978923797607421875",
+      "user": {
+        "id": "001",
+        "login": "Nastay",
+        "password": "qwe123",
+        "registedAt": "2023-09-22",
+        "roleId": 0
+      },
+      "id": 1
+    }
+  ]
 }
