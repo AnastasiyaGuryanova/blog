@@ -48,8 +48,6 @@ export const Blog = () => {
 					<Route path="/" element={<Main />} />
 					<Route path="/login" element={<Autorization />} />
 					<Route path="/register" element={<Registration />} />
-					import {(Autorization, Registration.UsersContainer)} from
-					"./pages";
 					<Route path="/users" element={<Users />} />
 					<Route path="/post" element={<Post />} />
 					<Route path="/post/:id" element={<Post />} />
