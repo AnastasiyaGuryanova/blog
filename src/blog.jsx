@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import { useLayoutEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Error, Header, Footer, Modal } from "./components";
-import { Authorization, Registration, Post, Users, Main } from "./pages";
-import { ERROR } from "./constants";
-import { setUser } from "./actions";
+import { Error, Header, Footer, Modal } from "@components";
+import { Authorization, Registration, Post, Users, Main } from "@pages";
+import { ERROR } from "@constants";
+import { setUser } from "@actions";
 import styled from "styled-components";
 
 const AppColumn = styled.div`

@@ -1,4 +1,4 @@
-import { ACTION_TYPE } from "../actions/action-type";
+import { ACTION_TYPE } from "@actions";
 
 const initialPostState = {
 	id: "",
@@ -15,6 +15,18 @@ export const postReduser = (state = initialPostState, action) => {
 			return {
 				...state,
 				...action.payload,
+			};
+		case ACTION_TYPE.ADD_COMMENT:
+			return {
+				...state,
+				comments: [...state.comments, action.payload],
+			};
+		case ACTION_TYPE.REMOVE_COMMENT:
+			return {
+				...state,
+				comments: state.comments.filter(
+					(comment) => comment.id !== action.payload,
+				),
 			};
 		case ACTION_TYPE.RESET_POST_DATA:
 			return initialPostState;

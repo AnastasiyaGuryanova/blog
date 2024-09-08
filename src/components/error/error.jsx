@@ -1,5 +1,5 @@
 import { H2 } from "../h2/h2";
-import { PROP_TYPE } from "../../constants";
+import { PROP_TYPE } from "@constants";
 import styled from "styled-components";
 
 const Div = styled.div`

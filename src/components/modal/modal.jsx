@@ -4,7 +4,7 @@ import {
 	selectModalOnCancel,
 	selectModalOnConfirm,
 	selectModalText,
-} from "../../selectors";
+} from "@selectors";
 import { Button } from "../button/button";
 import styled from "styled-components";
 

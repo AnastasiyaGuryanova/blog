@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 import PropTypes from "prop-types";
 import { Error } from "../error/error";
-import { ERROR, PROP_TYPE } from "../../constants";
-import { selectUserRole } from "../../selectors";
-import { checkAccess } from "../../utils";
+import { ERROR, PROP_TYPE } from "@constants";
+import { selectUserRole } from "@selectors";
+import { checkAccess } from "@utils";
 
 export const PrivateContent = ({ children, access, serverError = null }) => {
 	const userRole = useSelector(selectUserRole);

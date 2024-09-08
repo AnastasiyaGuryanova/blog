@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { PROP_TYPE } from "../../../../constants";
-import { H2, Icon } from "../../../../components";
+import { PROP_TYPE } from "@constants";
+import { H2, Icon } from "@components";
 import { SpecialPanel } from "../special-panel/special-panel";
 import styled from "styled-components";
 

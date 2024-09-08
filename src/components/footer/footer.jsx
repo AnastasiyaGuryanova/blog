@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API_KEY } from "../../constants";
+import { API_KEY } from "@constants";
 import styled from "styled-components";
 
 const FooterContainer = ({ className }) => {

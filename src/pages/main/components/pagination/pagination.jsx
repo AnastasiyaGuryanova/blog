@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Button } from "../../../../components";
+import { Button } from "@components";
 import styled from "styled-components";
 
 const PaginationContainer = ({ className, page, lastPage, setPage }) => {
