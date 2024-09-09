@@ -15,12 +15,12 @@ export default defineConfig({
 			"@utils": "/src/utils",
 		},
 	},
-	server: {
-		proxy: {
-			"/api": {
-				target: "http://localhost:3001",
-				changeOrigin: true,
-			},
-		},
-	},
+	// server: {
+	// 	proxy: {
+	// 		"/api": {
+	// 			target: "http://localhost:3001",
+	// 			changeOrigin: true,
+	// 		},
+	// 	},
+	// },
 });

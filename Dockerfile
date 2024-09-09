@@ -2,14 +2,15 @@ FROM node:18
 
 WORKDIR /user/srs/app
 
-COPY package*.json ./
-
-RUN npm install
-
 COPY . .
 
-RUN mkdir -p uploads
+WORKDIR /user/srs/app/frontend
+RUN npm i
+RUN npm run build
 
-EXPOSE 3002
+WORKDIR /user/srs/app/backend
+RUN npm i
 
-CMD [ "node", "app.js", "--port", "3002" ]
+EXPOSE 3001
+
+CMD [ "node", "app.js" ]
