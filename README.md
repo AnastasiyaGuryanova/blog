@@ -8,13 +8,13 @@
 - Валидация форм с помощью `react-hook-form` и `yup`.
 - Стилизация с использованием `styled-components`.
 
- # Технологии:
-Frontend: React, Redux, React Router, Styled Components
-Build Tool: Vite
-Валидация форм: React Hook Form, Yup
-DevTools: ESLint, Prettier, json-server
+## Технологии:
+- Frontend: React, Redux, React Router, Styled Components
+- Build Tool: Vite
+- Валидация форм: React Hook Form, Yup
+- DevTools: ESLint, Prettier, json-server
 
-# Развертывание:
+## Развертывание:
 Проект настроен для работы с Docker-контейнерами и развернут на timeweb.cloud.****
 
 ## Ссылка на сайт:
